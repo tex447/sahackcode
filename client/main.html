@@ -1,0 +1,48 @@
+<head>
+  <title>corporatesa</title>
+</head>
+
+<body>
+  {{> info}}
+</body>
+
+
+
+<template name="info">
+  <h2>Team Corporate SA</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+      <h3>Rides on our MYSQL DB</h3><br>An example ride in our database: select which datapoints you would like to write into a MongoDB Document
+      <br><br>
+        {{#each ride}}
+
+
+
+<input type="checkbox"> StartStation ID:{{startStation._id}}<br>
+<input type="checkbox"> Station Name:{{startStation.name}}<br>
+<input type="checkbox"> Station Location type:
+{{startStation.location.type}}<br>
+<input type="checkbox"> Station Location coordinates:
+{{startStation.location.coordinates}}<br>
+<input type="checkbox"> Endstation ID:{{endStation._id}}<br>
+<input type="checkbox"> Endstation Name:{{endStation.name}}<br>
+<input type="checkbox"> Endstation location type:{{endStation.location.type}}<br>
+<input type="checkbox"> Endstation location coordinates:{{endStation.location.coordinates}}<br>
+<input type="checkbox"> Bike#:{{bike}}<br>
+<input type="checkbox"> Duration:{{duration}}<br>
+<input type="checkbox"> Ride Time:{{time}}<br>
+
+        {{/each}}
+<br>
+        <button type="button" name="button">Click Here to Write to MongoDB</button>
+      </div>
+      <div class="col-md-6">
+        Stuff 2
+      </div>
+    </div>
+  </div>
+
+
+
+</template>
